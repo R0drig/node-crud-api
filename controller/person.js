@@ -20,4 +20,11 @@ const create  = (req,res,next) =>{
     })
 }
 
+const personView = (req,res,next) =>{
+    Person.find({}).then((data)=>{
+        res.send(data)
+    )})
+}
+
 module.exports.create = create 
+module.exports.personView = personView 
