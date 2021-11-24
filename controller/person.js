@@ -26,5 +26,26 @@ const personView = (req,res,next) =>{
     )})
 }
 
+const personUpdate =(req,res,next) =>{
+    Person.findByIdAndUpdate(req.params.id,req.body, (err,emp)=>{
+        if (err){
+            return res.status(500).send({error: "Problem with the person recorded"})
+        }
+        res.send({sucess:"Person updated"});
+    })
+}
+
+
+const personDelete =(req,res,next) =>{
+    Person.findByIdAndDelete(req.params.id, (err,emp)=>{
+        if (err){
+            return res.status(500).send({error: "Problem with the deleting person recorded"})
+        }
+        res.send({sucess:"Operation sucessful"});
+    })
+}
+
 module.exports.create = create 
 module.exports.personView = personView 
+module.exports.personUpdate = personUpdate
+module.exports.personDelete = personDelete
