@@ -13,12 +13,12 @@ Person = {
 
 <h3>Routes:</h3>
 <ol>
-    <code><li>/api/v1/create</li></code>
+    <li>/api/v1/create</li>
     <p>This url accepts a POST request with a Person data</p>
-    <code><li>/api/v1/</li></code>
+    <li>/api/v1/</li>
     <p>This url accepts a GET request and display all users that were added</p>
-    <code><li>/api/v1/<Person_ID></li></code>
+    <li>/api/v1/<Person_ID></li>
     <p>This url accepts a PATCH request and updates a user with certain that were modified</p>
-    <code><li>/api/v1/delete/<Person_ID></li></code>
+    <li>/api/v1/delete/<Person_ID></li>
     <p>This url accepts a DELETE request and deletes a person in DB</p>
 </ol>
