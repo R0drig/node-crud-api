@@ -1,25 +1,25 @@
 const mongoose = require("mongoose")
 
 const personSchema = new mongoose.Schema({
-    firstName{
+    firstName:{
         type: String,
         required: true
     },
-    lastName{
+    lastName:{
         type: String,
         required: true
     },
-    age{
+    age:{
         type: Number,
         required: true
     },
-    yearOfBirth{
+    yearOfBirth:{
         type: Date,
         required: false
     },
-    createdAt{
+    createdAt:{
         type: Date,
-        default: Date.now()
+        default: Date.now(),
         required: false
     }
 })

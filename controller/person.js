@@ -23,7 +23,7 @@ const create  = (req,res,next) =>{
 const personView = (req,res,next) =>{
     Person.find({}).then((data)=>{
         res.send(data)
-    )})
+    })
 }
 
 const personUpdate =(req,res,next) =>{

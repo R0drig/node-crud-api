@@ -3,7 +3,7 @@ const create = require("../controller/person");
 const personView = require("../controller/person");
 const personUpdate = require("../controller/person");
 const personDelete = require("../controller/person");
-const bodyparser = require("bodyparser");
+const bodyparser = require("body-parser");
 let router = express()
 
 router.use(bodyparser.json())
@@ -12,3 +12,5 @@ router.get("/",personView.personView)
 router.patch("/:id", personUpdate.personUpdate)
 router.delete("/delete/:id", personDelete.personDelete)
 
+
+module.exports = router
