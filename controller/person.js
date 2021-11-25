@@ -9,7 +9,7 @@ const create  = (req,res,next) =>{
     let yearOfBirth = req.body.yearOfBirth;
 
     let person = new Person({
-        FirstName,
+        firstName,
         lastName,
         age,
         yearOfBirth
